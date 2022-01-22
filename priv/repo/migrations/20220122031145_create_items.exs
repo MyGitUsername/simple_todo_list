@@ -3,7 +3,7 @@ defmodule TodoList.Repo.Migrations.CreateItems do
 
   def change do
     create table(:items) do
-      add :description, :string
+      add :description, :string, null: false
       add :complete, :boolean, default: false, null: false
 
       timestamps()
